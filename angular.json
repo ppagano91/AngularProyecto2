@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": false
+    "analytics": "3d44c60d-2a34-4f3b-916e-c0fb204df40f"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-v4": {
+    "angular-v5": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -42,7 +42,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-v4",
+            "outputPath": "dist/angular-v5",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -94,10 +94,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-v4:build:production"
+              "browserTarget": "angular-v5:build:production"
             },
             "development": {
-              "browserTarget": "angular-v4:build:development"
+              "browserTarget": "angular-v5:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,7 +105,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-v4:build"
+            "browserTarget": "angular-v5:build"
           }
         },
         "test": {
@@ -129,5 +129,5 @@
       }
     }
   },
-  "defaultProject": "angular-v4"
+  "defaultProject": "angular-v5"
 }

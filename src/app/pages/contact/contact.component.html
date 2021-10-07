@@ -1,0 +1,53 @@
+<div class="form__container">
+  <h1>Contactanos</h1>
+  <form class="form">
+    <label for="name">Nombre</label>
+    <input
+      [(ngModel)]="formData.name"
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Nombre"
+    />
+
+    <br />
+    <label for="email">Email</label>
+    <input
+      [(ngModel)]="formData.email"
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Email"
+    />
+
+    <br />
+    <label for="age">Edad</label>
+    <input
+      min="0"
+      max="99"
+      [(ngModel)]="formData.age"
+      type="number"
+      name="age"
+      id="age"
+    />
+
+    <br />
+    <label for="mailingList">Suscribirse al mailing list</label>
+    <input
+      [(ngModel)]="formData.mailingList"
+      type="checkbox"
+      name="mailingList"
+      id="mailingList"
+    />
+    <button [disabled]="!formData.name" (click)="sendFormData()">Enviar</button>
+  </form>
+  <div>
+    <span *ngIf="formData.name">
+      {{ formData.name }}, muchas gracias por escribirnos! En breve estaremos
+      contactandonos con vos!
+    </span>
+    <button *ngIf="formData.name" (click)="resetName()" type="button">
+      Reset Nombre
+    </button>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div [ngClass]="darkMode ? '' : 'lightMode'" class="header__container">
+  <header class="header">
+    <h1 class="header__title">Icaro Web</h1>
+    <nav class="header__nav">
+      <a class="header__link" routerLink="home">Home</a>
+      <a class="header__link" routerLink="users">Users</a>
+      <a class="header__link" routerLink="products">Productos</a>
+      <a class="header__link" routerLink="contact">Contacto</a>
+    </nav>
+    <button class="switchBtn" (click)="toggleDarkMode()">
+      <img
+        *ngIf="darkMode"
+        height="40"
+        width="40"
+        src="../../../assets/img/sun-icon.svg"
+        alt="light mode icon"
+      />
+      <img
+        *ngIf="!darkMode"
+        height="30"
+        width="30"
+        src="../../../assets/img/moon-icon.svg"
+        alt="dark mode icon"
+      />
+    </button>
+  </header>
+</div>

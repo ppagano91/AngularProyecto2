@@ -1,0 +1,49 @@
+.header {
+  &__container {
+    background-color: #111;
+    color: #eee;
+  }
+
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+
+  &__nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #eee;
+  }
+}
+
+.lightMode {
+  background-color: rgba(#eee, 0.75);
+  color: #111;
+
+  a {
+    color: #111;
+  }
+}
+
+.switchBtn {
+  border-radius: 50%;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
