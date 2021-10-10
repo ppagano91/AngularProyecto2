@@ -1,1 +1,7 @@
-<p>product works!</p>
+<!-- <p>product works!</p> -->
+
+<p>product</p>
+<h4 class="product__title">{{ productData.description }}</h4>
+
+<p class="product__price" *ngIf="productData.price">${{ productData.price }}</p>
+<p class="product__price" *ngIf="!productData.price">NaN</p>

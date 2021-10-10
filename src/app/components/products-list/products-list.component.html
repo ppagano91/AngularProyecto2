@@ -1,16 +1,38 @@
 <p>Productos</p>
 
+<!-- En este ejemplo todos los productos se imprimen en la página web, aunque no tenga precio y/o nombre  -->
+<ul class="products">
+  <li *ngFor="let product of products">
+    <h4 class="products__title">{{ product.description }}</h4>
+    <p>{{ product.price }}</p>
+  </li>
+</ul>
+
+<!-- En este ejemplo se filtan previamente los datos que tenga nombre y/o precio -->
 <div class="products">
   <div class="product" *ngFor="let product of filteredProducts">
-    <app-product [productData]="product"></app-product>
-    <!--
-      <h4 class="product__title">{{ product.description }}</h4>
+    <div *ngIf="product.description" class="product-info">
+      <h4 class="product__title">
+        {{ product.description }}
+      </h4>
 
-    <p class="product__price" *ngIf="product.price">${{ product.price }}</p>
-    <p class="product__price" *ngIf="!product.price">NaN</p> -->
+      <p *ngIf="product.price" class="product__price">
+        {{ product.price }}
+      </p>
+      <p *ngIf="!product.price" class="product__price">-</p>
+    </div>
   </div>
 </div>
 
+<div class="products">
+  <div class="product" *ngFor="let product of filteredProducts">
+    <!-- Mostar los productos utilizando  <app-product> y el componente "product" HTML -->
+    <!-- A la propiedad [producData] (del componente product/Hijo) le INYECTO el product (del componente productsList/Padre) -->
+    <app-product [productData]="product"></app-product>
+  </div>
+</div>
+
+<!-- Probando ngFor -->
 <div *ngFor="let i of [1, 2, 3, 4, 5]">
   <h4>Hello, World!</h4>
 </div>
