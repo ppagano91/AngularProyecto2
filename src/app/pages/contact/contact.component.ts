@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
   formData = {
-    name: '',
+    name: 'Juan',
     email: '',
     age: 0,
     mailingList: true,

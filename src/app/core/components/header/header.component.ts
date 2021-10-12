@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   darkMode = true;
+  // header = {
+  //   color: this.darkMode ? 'red' : '#111',
+  // };
 
   constructor() {}
 

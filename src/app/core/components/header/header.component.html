@@ -1,4 +1,6 @@
 <div [ngClass]="darkMode ? '' : 'lightMode'" class="header__container">
+  <!-- la siguiente linea podria ir adentro del header__container para agregarle los estilos que se especifican en la propiedad 'header' del component.ts -->
+  <!-- [ngStyle]="header" -->
   <header class="header">
     <h1 class="header__title">Icaro Web</h1>
     <nav class="header__nav">

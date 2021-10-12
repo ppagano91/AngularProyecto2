@@ -39,7 +39,12 @@
       name="mailingList"
       id="mailingList"
     />
-    <button [disabled]="!formData.name" (click)="sendFormData()">Enviar</button>
+    <button
+      [disabled]="!formData.name || !formData.email || formData.age <= 0"
+      (click)="sendFormData()"
+    >
+      Enviar
+    </button>
   </form>
   <div>
     <span *ngIf="formData.name">
